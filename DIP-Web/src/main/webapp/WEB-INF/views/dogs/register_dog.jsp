@@ -1,6 +1,6 @@
 <%-- 
-    Document   : home_page
-    Created on : 08.12.2016, 22:07:15
+    Document   : register_dog
+    Created on : 10.12.2016, 14:38:48
     Author     : moneg
 --%>
 
@@ -61,12 +61,12 @@
                     <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
                     <div class="nav-collapse collapse navbar-responsive-collapse">
                     <ul class="nav">
-                        <li class="active"><a href="${pageContext.request.contextPath}/home_page">Home</a></li>
+                        <li><a href="${pageContext.request.contextPath}/home_page">Home</a></li>
                         
                         <li class="dropdown">
                           <a class="dropdown-toggle" data-toggle="dropdown">Register <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                  <li><a href="${pageContext.request.contextPath}/register_dog">Register dog</a></li>
+                                  <li class="active"><a href="${pageContext.request.contextPath}/register_dog">Register dog</a></li>
                                   <li><a href="${pageContext.request.contextPath}/register_participant">Register participant</a></li>
                             </ul>
 
