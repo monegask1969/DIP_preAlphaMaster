@@ -1,23 +1,27 @@
 <%-- 
-    Document   : register_participant
-    Created on : 10.12.2016, 14:39:04
+    Document   : dogs
+    Created on : 12.12.2016, 9:59:30
     Author     : moneg
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Register Participant</title>
+  <title>Dogs Details</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
+		
+		
 
 	
 	<link href="layout/css/bootstrap.min.css" rel="stylesheet">
 	<link href="layout/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link href="layout/css/style.css" rel="stylesheet">
+	
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -110,7 +114,7 @@
 		<div class="span12">
 		<div class="page-header">
 				<h1>
-				Register Participant
+				Breeder test
 			</h1>
 		</div>
 		</div>
@@ -119,29 +123,23 @@
   <!-- /. PAGE TITLE-->
 
   <div class="row">
-
-  		<span class="span12">
-  			<form>
-				<fieldset>
-					 <h3>Register Yourself:</h3>
-					 <h6>First name:</h6>
-					 <input class="input-xxlarge" type="text" placeholder="Enter Your first name here" /> 
-					 <h6>Second name:</h6>
-                                         <input class="input-xxlarge" type="text" placeholder="Enter Your second name here"/> 
-					 <h6>Last name:</h6>
-                                         <input class="input-xxlarge" type="text" placeholder="Enter Your last name here"/> 
-					 <h6>Age:</h6>
-                                         <input type="date" name="calendar" value= date
-                                                                                max=date min= date2 >
-					 <h6>Which Dog Show:</h6>
-                                         <select>
-                                             <option>Kharkiv cup</option>
-                                         </select>
-						<br>
-					 <button type="submit" class="btn">Submit</button>
-				</fieldset>
-			</form>
-  		</span>
+<table class="simple-little-table" cellspacing='0'>
+	<tr>
+		<th>id </th>
+		<th>First name</th>
+		<th>Second name</th>
+		<th>Last name</th>
+	</tr><!-- Table Header -->
+        <c:forEach var="b" items="${breeder}">
+            <tr>
+                <td>${b.id}</td>
+                <td>${b.fname}</td>
+                <td>${b.sname}</td>
+                <td>${b.lname}</td>
+            </tr>
+        </c:forEach>
+	
+</table>
 
   </div>
 

@@ -21,4 +21,7 @@ public interface DogshowDAO {
     Dogshow getByAddress(String address);
     Dogshow getByOrganizer(String organizer);
     List<Dogshow> getList();
+    public void addDogShow(Dogshow dogshow);
+    public void deleteDogShow(int dogshowId);
+    public void updateDogShow(Dogshow dogshow);
 }

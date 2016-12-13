@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import st.dog.dip.domain.Dogshow.Dogshow;
 import st.dog.dip.service.Dogshow.DogshowService;
 
+
 /**
  *
  * @author moneg
@@ -21,16 +22,18 @@ import st.dog.dip.service.Dogshow.DogshowService;
 @Controller
 public class DogShowPageController {
     @Autowired
-        DogshowService dogShowService;
+        DogshowService dogshowService;
     
-     @RequestMapping(value = {"/dogshow"}, method = {RequestMethod.GET})
-    public ModelAndView getHomePage(){
+  @RequestMapping(value = {"/dogshows"}, method = {RequestMethod.GET})
+    public ModelAndView getDogShows(){
+        ModelAndView mv = new ModelAndView();        
+        List<Dogshow> dList = dogshowService.getList();
         System.out.println("DOGSHOW");
-        List<Dogshow> dList = dogShowService.getList();
-        System.out.println(dList);
-        ModelAndView mv = new ModelAndView();
-        mv.addObject("dogshow", dList);
+        System.out.println(dList);        
         mv.setViewName("dogs/dogshows");
+        mv.addObject("dogshows", dList);
         return mv;
     }
+    
+   
 }

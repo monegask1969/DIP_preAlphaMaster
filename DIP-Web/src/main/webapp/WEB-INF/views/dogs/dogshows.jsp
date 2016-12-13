@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ShapeBootstrap Clean Template</title>
+  <title>Dog Shows</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -106,8 +106,8 @@
 	
 		<div class="span9">
 			<!--Blog Post-->
-                        <c:forEach var="dsh" items="${dogshow}">
-			<div class="blog-post" id="dsh_${dsh.id}">
+                        <c:forEach var="dsh" items="${dogshows}">
+			<div class="blog-post">
 				<h2>${dsh.title}</h2>
 
 				<div class="postmetadata">
@@ -214,16 +214,16 @@
 <footer>
     <div class="container">
       <div class="row">
-        <div class="span6">Copyright &copy <script type='text/javascript'>var mdate = new Date();document.write(mdate.getFullYear());</script> Mysite | All Rights Reserved  <br>
-        <small>Aliquam tincidunt mauris eu risus.</small>
+        <div class="span6">Copyright &copy <script type='text/javascript'>var mdate = new Date();document.write(mdate.getFullYear());</script> Safronov Maksym | All Rights Reserved  <br>
+        <small>May the Force be with you.</small>
         </div>
         <div class="span6">
             <div class="social pull-right">
-                <a href="#"><img src="img/social/googleplus.png" alt=""></a>
-                <a href="#"><img src="img/social/dribbble.png" alt=""></a>
-                <a href="#"><img src="img/social/twitter.png" alt=""></a>
-                <a href="#"><img src="img/social/dribbble.png" alt=""></a>
-                <a href="#"><img src="img/social/rss.png" alt=""></a>
+                <a href="#"><img src="layout/img/social/googleplus.png" alt=""></a>
+                <a href="#"><img src="layout/img/social/dribbble.png" alt=""></a>
+                <a href="#"><img src="layout/img/social/twitter.png" alt=""></a>
+                <a href="#"><img src="layout/img/social/dribbble.png" alt=""></a>
+                <a href="#"><img src="layout/img/social/rss.png" alt=""></a>
             </div>
         </div>
       </div>

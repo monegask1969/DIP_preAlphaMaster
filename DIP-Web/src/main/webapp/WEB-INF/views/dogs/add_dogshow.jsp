@@ -1,15 +1,19 @@
 <%-- 
-    Document   : register_participant
-    Created on : 10.12.2016, 14:39:04
+    Document   : add_dogshow
+    Created on : 13.12.2016, 13:18:11
     Author     : moneg
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%--<%@page contentType="text/html" pageEncoding="UTF-8"%>--%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Register Participant</title>
+  <title>Add Dog Show</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -110,7 +114,7 @@
 		<div class="span12">
 		<div class="page-header">
 				<h1>
-				Register Participant
+				Add Dog Show
 			</h1>
 		</div>
 		</div>
@@ -121,24 +125,30 @@
   <div class="row">
 
   		<span class="span12">
-  			<form>
+                    <form method="POST" action = 'AddDogShowController' name="frmAddDogShow">
 				<fieldset>
-					 <h3>Register Yourself:</h3>
-					 <h6>First name:</h6>
-					 <input class="input-xxlarge" type="text" placeholder="Enter Your first name here" /> 
-					 <h6>Second name:</h6>
-                                         <input class="input-xxlarge" type="text" placeholder="Enter Your second name here"/> 
-					 <h6>Last name:</h6>
-                                         <input class="input-xxlarge" type="text" placeholder="Enter Your last name here"/> 
-					 <h6>Age:</h6>
-                                         <input type="date" name="calendar" value= date
-                                                                                max=date min= date2 >
-					 <h6>Which Dog Show:</h6>
-                                         <select>
-                                             <option>Kharkiv cup</option>
-                                         </select>
+					 <h3>Make a new Dog Show</h3>
+					 <h6>Title:</h6>
+                                         Title: <input type="text"  name="title" value="<c:out value="${dogshow.title}"/>"/><br/>
+					 <!--<input class="input-xxlarge" type="text" name="title" placeholder="Enter the title of Your Dog Show" />--> 
+					 <h6>Date:</h6>
+                                         Date: <input type="date"  name="date" value="<c:out value="${dogshow.date}"/>"/><br/>
+<!--                                         <input type="date" name="calendar" name="date" value= date
+                                                                                max=date min= date2 >      ¬±¬²¬¦¬¥¬¦¬­¬½ ¬£¬£¬°¬¥¬¡ ¬¥¬¡¬´¬½-->
+					 <h6>Sponsor:</h6>
+                                         Sponsor: <input type="text"  name="sponsor" value="<c:out value="${dogshow.sponsor}"/>"/><br/>
+<!--                                         <input class="input-xxlarge" type="text" name="sponsor" placeholder="Enter the sponsor of Your Dog Show"/>-->
+					 <h6>Description:</h6>
+                                         Description: <input type="text"  name="description" value="<c:out value="${dogshow.description}"/>"/><br/>
+                                         <!--<input class="input-xxlarge" type="text" name="description" placeholder="Enter description of Your Dog Show"/>-->
+                                         <h6>Address:</h6>
+                                         Address: <input type="text"  name="address" value="<c:out value="${dogshow.address}"/>"/><br/>
+                                         <!--<input class="input-xxlarge" type="text" name="address" placeholder="Enter address of Your Dog Show"/>-->
+                                         <h6>Organizer:</h6>
+                                         Organizer <input type="text"  name="organizer" value="<c:out value="${dogshow.organizer}"/>"/><br/>
+                                         <!--<input class="input-xxlarge" type="text" name="organizer" placeholder="Enter organizer of Your Dog Show"/>-->
 						<br>
-					 <button type="submit" class="btn">Submit</button>
+                                                <button type="submit" value="Submit" class="btn">Submit</button>
 				</fieldset>
 			</form>
   		</span>

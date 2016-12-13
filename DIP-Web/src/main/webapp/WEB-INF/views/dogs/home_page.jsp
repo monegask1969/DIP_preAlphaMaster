@@ -9,7 +9,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>ShapeBootstrap Clean Template</title>
+    <title>Home Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -74,6 +74,9 @@
 
                         <li><a href="${pageContext.request.contextPath}/dogshows">Dog Shows</a></li>
                         <li><a href="${pageContext.request.contextPath}/about">About</a></li>
+                        <li><a href="${pageContext.request.contextPath}/reg">Registration test</a></li>
+                        <li><a href="${pageContext.request.contextPath}/breeder">Dogs test</a></li>
+                        <li><a href="${pageContext.request.contextPath}/add_dogshows">Add dog show test</a></li>
                  
                     </ul>
                   </div>
@@ -105,14 +108,13 @@
               <div class="span6">
 
                 <div class="carousel-caption">
-                      <h1>Example headline</h1>
-                      <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                      <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+                      <h1>Dogs In Pocket. Smart. Easy. Always in Your pocket!</h1>
+                      <a class="btn btn-large btn-primary" href="${pageContext.request.contextPath}/reg">Join us today!</a>
                 </div>
 
               </div>
 
-                <div class="span6"> <img src="img/slide/slide1.jpg"></div>
+                <div class="span6"> <img src="layout/dog-show.jpg"></div>
 
           </div>
         </div>
@@ -130,14 +132,14 @@
               <div class="span6">
 
                 <div class="carousel-caption">
-                      <h1>Example headline</h1>
-                      <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                      <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+                      <h1>Register Your dog at Dog Show!</h1>
+                      <p class="lead"></p>
+                      <a class="btn btn-large btn-primary" href="${pageContext.request.contextPath}/register_dog">Register now!</a>
                 </div>
 
               </div>
 
-                <div class="span6"> <img src="img/slide/slide2.jpg"></div>
+                <div class="span6"> <img src="layout/uku.jpg"></div>
 
           </div>
         </div>
@@ -170,7 +172,7 @@
       </div>
 
       <div class="span4">
-        <img src="img/icon3.png">
+        <img src="layout/img/icon3.png">
         <h2>Feature A</h2>
         <p>
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
@@ -181,7 +183,7 @@
       </div>
 
       <div class="span4">
-        <img src="img/icon2.png">
+        <img src="layout/img/icon2.png">
         <h2>Feature B</h2>
         <p>
             Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -191,7 +193,7 @@
       </div>
 
       <div class="span4">
-        <img src="img/icon1.png">
+        <img src="layout/img/icon1.png">
         <h2>Feature C</h2>
         <p>
             Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. 
@@ -209,10 +211,10 @@
 
 
     <div class="row">
-        <div class="span6"><img src="img/responsive.png"></div>
+        <div class="span6"><img src="layout/img/responsive.png"></div>
 
         <div class="span6">
-          <img class="hidden-phone" src="img/icon4.png" alt="">
+          <img class="hidden-phone" src="layout/img/icon4.png" alt="">
           <h1>Fully Responsive</h1>
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
              <a href="#">Read More &rarr;</a>
@@ -233,16 +235,16 @@
 <footer>
     <div class="container">
       <div class="row">
-        <div class="span6">Copyright &copy <script type='text/javascript'>var mdate = new Date();document.write(mdate.getFullYear());</script> Mysite | All Rights Reserved  <br>
-        <small>Aliquam tincidunt mauris eu risus.</small>
+        <div class="span6">Copyright &copy <script type='text/javascript'>var mdate = new Date();document.write(mdate.getFullYear());</script> Safronov Maksym | All Rights Reserved  <br>
+        <small>May the Force be with you.</small>
         </div>
         <div class="span6">
             <div class="social pull-right">
-                <a href="#"><img src="img/social/googleplus.png" alt=""></a>
-                <a href="#"><img src="img/social/dribbble.png" alt=""></a>
-                <a href="#"><img src="img/social/twitter.png" alt=""></a>
-                <a href="#"><img src="img/social/dribbble.png" alt=""></a>
-                <a href="#"><img src="img/social/rss.png" alt=""></a>
+                <a href="#"><img src="layout/img/social/googleplus.png" alt=""></a>
+                <a href="#"><img src="layout/img/social/dribbble.png" alt=""></a>
+                <a href="#"><img src="layout/img/social/twitter.png" alt=""></a>
+                <a href="#"><img src="layout/img/social/dribbble.png" alt=""></a>
+                <a href="#"><img src="layout/img/social/rss.png" alt=""></a>
             </div>
         </div>
       </div>

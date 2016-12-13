@@ -1,6 +1,6 @@
 <%-- 
-    Document   : register_participant
-    Created on : 10.12.2016, 14:39:04
+    Document   : register
+    Created on : 11.12.2016, 21:28:26
     Author     : moneg
 --%>
 
@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Register Participant</title>
+  <title>Register</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -76,8 +76,8 @@
                     <ul class="nav">
                         <li ><a href="${pageContext.request.contextPath}/home_page">Home</a></li>
                         
-                        <li class="dropdown">
-                          <a class="dropdown-toggle" data-toggle="dropdown" href="${pageContext.request.contextPath}/register">Register <b class="caret"></b></a>
+                        <li class="dropdown"> 
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="${pageContext.request.contextPath}/register">Register <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                   <li ><a href="${pageContext.request.contextPath}/register_dog">Register dog</a></li>
                                   <li class="active"><a href="${pageContext.request.contextPath}/register_participant">Register participant</a></li>
@@ -110,7 +110,7 @@
 		<div class="span12">
 		<div class="page-header">
 				<h1>
-				Register Participant
+				Choose what You want
 			</h1>
 		</div>
 		</div>
@@ -121,26 +121,10 @@
   <div class="row">
 
   		<span class="span12">
-  			<form>
-				<fieldset>
-					 <h3>Register Yourself:</h3>
-					 <h6>First name:</h6>
-					 <input class="input-xxlarge" type="text" placeholder="Enter Your first name here" /> 
-					 <h6>Second name:</h6>
-                                         <input class="input-xxlarge" type="text" placeholder="Enter Your second name here"/> 
-					 <h6>Last name:</h6>
-                                         <input class="input-xxlarge" type="text" placeholder="Enter Your last name here"/> 
-					 <h6>Age:</h6>
-                                         <input type="date" name="calendar" value= date
-                                                                                max=date min= date2 >
-					 <h6>Which Dog Show:</h6>
-                                         <select>
-                                             <option>Kharkiv cup</option>
-                                         </select>
-						<br>
-					 <button type="submit" class="btn">Submit</button>
-				</fieldset>
-			</form>
+                    <h1>If You want to register Your dog</h1>
+                    <a class="btn btn-large btn-primary" href="${pageContext.request.contextPath}/register_dog">Register Dog</a>
+                    <h1>If You want to register Yourself</h1>
+                    <a class="btn btn-large btn-primary" href="${pageContext.request.contextPath}/register_participant">Register Yourself</a>
   		</span>
 
   </div>
