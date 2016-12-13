@@ -104,19 +104,15 @@ public class DogshowDAOImpl implements DogshowDAO{
 
     @Override
     public void addDogShow(Dogshow dogshow) {
-        try{
-            PreparedStatement preparedStatement = connection
-                    .prepareStatement("insert into dogshow(title,date,sponsor,description,address,organizer) values (?,?,?,?,?,?");
-            preparedStatement.setString(1, dogshow.getTitle());
-            preparedStatement.setDate(2, new java.sql.Date(dogshow.getDate().getTime()));
-            preparedStatement.setString(3, dogshow.getSponsor());
-            preparedStatement.setString(4, dogshow.getDescription());
-            preparedStatement.setString(5, dogshow.getAddress());
-            preparedStatement.setString(6, dogshow.getOrganizer());
-            preparedStatement.executeUpdate();
-        }catch(SQLException e){
-            e.printStackTrace();
-        }
+        Session session = HibernateUtil.getSessionFactory().openSession();
+session.getTransaction().begin();
+try{
+session.save(dogshow);
+session.getTransaction().commit();
+}catch(Exception ex){
+session.getTransaction().rollback();
+throw new RuntimeException("cannot save dogshow");
+}
     }
 
     @Override

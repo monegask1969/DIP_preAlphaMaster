@@ -125,7 +125,7 @@
   <div class="row">
 
   		<span class="span12">
-                    <form method="POST" action = 'AddDogShowController' name="frmAddDogShow">
+                    <form method="POST" action = "add_show" name="frmAddDogShow">
 				<fieldset>
 					 <h3>Make a new Dog Show</h3>
 					 <h6>Title:</h6>

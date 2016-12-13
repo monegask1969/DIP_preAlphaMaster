@@ -30,19 +30,19 @@ public class AddDogShowController {
         return mv;
     }
     
-    @RequestMapping(value = {"/add_show"}, method = {RequestMethod.GET})
-    public ModelAndView addShow(@RequestParam("title") String title, @RequestParam("date") Date date, @RequestParam("sponsor") String sponsor, @RequestParam("description") String description, @RequestParam("address") String address, 
-            @RequestParam("organizer") String organizer){
-        ModelAndView mv = new ModelAndView();
-        Dogshow dogshow = new Dogshow();
-        dogshow.setTitle(title);
-        dogshow.setDate(date);
-        dogshow.setSponsor(sponsor);
-        dogshow.setDescription(description);
-        dogshow.setAddress(address);
-        dogshow.setOrganizer(organizer);
-        dogshowDAO.addDogShow(dogshow);
-        mv.setViewName("dogs/finished");
-        return mv;
-    }
+   @RequestMapping(value = {"/add_show"}, method = {RequestMethod.POST}) 
+public ModelAndView addShow(@RequestParam("title") String title, @RequestParam("date") Date date, @RequestParam("sponsor") String sponsor, @RequestParam("description") String description, @RequestParam("address") String address, 
+@RequestParam("organizer") String organizer){ 
+ModelAndView mv = new ModelAndView(); 
+Dogshow dogshow = new Dogshow(); 
+dogshow.setTitle(title); 
+dogshow.setDate(date); 
+dogshow.setSponsor(sponsor); 
+dogshow.setDescription(description); 
+dogshow.setAddress(address); 
+dogshow.setOrganizer(organizer); 
+dogshowDAO.addDogShow(dogshow); 
+mv.setViewName("dogs/finished"); 
+return mv; 
+}
 }
